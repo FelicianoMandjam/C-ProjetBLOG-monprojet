@@ -1,0 +1,266 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'accueil!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+   
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+    h1 ,h3{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color:white;
+        
+    }
+    article{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+
+        border:block;
+        background-color:black !important;
+        border-radius:15px;
+    }
+
+    iframe{
+        border-radius: 15px;
+    }
+    .musculation{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+
+        border:block;
+        background-color:black !important;
+        border-radius:15px;
+    }
+    .list-group{
+        text-align:center;
+        width:98%;
+    }
+
+    .btn:link,
+.btn:visited {
+ text-transform: uppercase;
+ text-decoration: none;
+ color: rgb(27, 27, 27);
+ padding: 10px 30px;
+ border: 1px solid;
+ border-radius: 1000px;
+ display: inline-block;
+ transition: all .2s;
+ position: relative;
+}
+
+.btn:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+}
+
+.btn:active {
+ transform: translateY(-3px);
+}
+
+.btn::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 100px;
+ top: 0;
+ left: 0;
+ position: absolute;
+ z-index: -1;
+ transition: all .3s;
+}
+
+.btn:hover::after {
+ background-color: rgb(0, 238, 255);
+ transform: scaleX(1.4) scaleY(1.5);
+ opacity: 0;
+}
+    
+    
+</style>
+
+<h1><button data-text="Awesome" class="button">
+    <span class="actual-text">&nbsp;Sport.FELICIANO&nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp;Sport.FELICIANO&nbsp;</span>
+</button></h1>
+
+</br>
+</br>
+<h3>Bienvenue sur notre blog dédié au sport ! Vous y trouverez des articles sur les dernières actualités sportives, des conseils pour améliorer votre performance, ainsi que des histoires inspirantes de sportifs de tous niveaux. Rejoignez notre communauté passionnée de sportifs et de passionnés de sport pour rester informé et inspiré. Commençons notre voyage sportif ensemble! </h3>
+
+</br>
+
+ <div class="container">
+
+   <div class="bd-example">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            
+             <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('home/DR.jpg') }}" class="d-block w-100" alt="Vaisselle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('home/DR.jpg') }}" class="d-block w-100" alt="Vaisselle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('home/DR.jpg') }}" class="d-block w-100" alt="Vaisselle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('home/DR.png') }}" class="d-block w-100" alt="Vaisselle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('home/DR.jpg') }}" class="d-block w-100" alt="Vaisselle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    </div>
+
+</br>
+</br>
+<article>
+<div> 
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/g031sw47JqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</div>
+
+<div id:"p-motivation"> 
+<h3>La Motivation et la discipline</h3>
+<p class="text-white"> La motivation et la discipline sont deux éléments clés pour réussir dans le monde du sport. La motivation vous aide à vous fixer des objectifs et à trouver l'énergie nécessaire pour les atteindre. Cela peut provenir de nombreuses sources, comme la passion pour un sport en particulier, la volonté de se surpasser ou encore la recherche de la performance.
+La discipline quant à elle, permet de suivre un plan d'entraînement rigoureux et de maintenir une bonne hygiène de vie. Cela peut inclure des choses telles que l'alimentation saine, la régularité des entraînements et la gestion efficace du temps. Avoir une bonne discipline est essentiel pour améliorer ses performances et atteindre ses objectifs à long terme.
+En résumé, la motivation vous donne la raison de faire quelque chose, tandis que la discipline vous donne la façon de le faire. Les deux sont nécessaires pour réussir dans le sport, et c'est pour cette raison que nous mettons un accent sur ces deux éléments dans notre blog.</p>
+</div>
+</article>
+
+</br>
+
+<article class="musculation">
+
+
+
+<div class="muscu-photo">
+<img src="https://cdn.pixabay.com/photo/2013/07/12/13/18/bodybuilder-146791_960_720.png" alt="Musculation" height="350px" weight="245px">;
+</div>
+<div>
+<h3>La musculation </h3>
+<p class="text-white">La musculation est un mode d'entraînement physique qui consiste à utiliser des résistances pour développer la force, la puissance et la masse musculaire.
+En pratiquant régulièrement la musculation, on peut améliorer sa condition physique, sa santé globale, sa posture, sa coordination, son équilibre, sa flexibilité, sa résistance à l'effort et même sa confiance en soi. La musculation est un moyen efficace de brûler des calories et de perdre de la graisse corporelle. Elle peut être pratiquée à tout âge et adaptée à tous les niveaux de forme physique. Il est important de suivre un programme d'entraînement adapté à ses objectifs et de respecter les règles de sécurité pour éviter les blessures.
+
+<h4 class="text-center text-white"> Les pricipales salles de sport en région parisienne </h4>
+
+<div class="list-group">
+
+
+  <a href="https://www.fitnesspark.fr/" class="btn list-group-item list-group-item-action " aria-current="true">
+    FitnessPark <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+</svg> </span>
+  </a>
+
+
+  <a href="https://www.basic-fit.com/fr-fr/home?gclid=Cj0KCQiA8aOeBhCWARIsANRFrQFpOdUQBW1fLF-T5fkUKdC4uOWok-DMCjRpIF0d1MaYPz__UWI65F8aAqBeEALw_wcB" class="btn list-group-item list-group-item-action">BasicFit<span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+</svg> </span></a>
+
+
+  <a href="https://gigafit.fr/les-clubs/?gclid=Cj0KCQiA8aOeBhCWARIsANRFrQGa3vHE7vSKpnCmdfB-vKNXkWmuC93V7YCPiBURCVA5_qJRbP1PtQMaAmVtEALw_wcB" class="btn list-group-item list-group-item-action">GigaFit <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+</svg> </span></a>
+  
+  
+</div>
+
+</div>
+</article>
+
+
+
+{% endblock %}
